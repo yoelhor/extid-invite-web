@@ -44,7 +44,7 @@ namespace extid_invite_web
             // Sample: Load the app settings section and bind to AppSettingsModel object graph
             services.Configure<AppSettings>(Configuration.GetSection("AzureAd"));
 
-            services.AddSingleton<IInviteService, InviteSdkService>();
+            services.AddSingleton<IInviteService, InviteWithoutSdkService>();
 
             services.AddRazorPages();
         }
